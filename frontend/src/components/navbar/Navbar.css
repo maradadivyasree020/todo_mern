@@ -1,0 +1,18 @@
+.user-png{
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+}
+
+.navbar-brand{
+    color:rgb(121, 7, 227);
+    font-size:30px;
+    font-weight: bold;
+    font-family:'Courier New', Courier, monospace;
+}
+
+/* .btn-nav{
+    background-color:rgb(121, 7, 227);
+    border-radius: 10px;
+    color: white !important;
+} */
