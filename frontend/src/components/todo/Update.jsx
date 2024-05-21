@@ -22,7 +22,7 @@ const Update = ({display,update}) => {
     try{
     console.log(Inputs)
     console.log(update.title)
-    await axios.put(`http://localhost:5000/api/v2/updateTask/${update._id}`,Inputs)
+    await axios.put(`${window.location.origin}/api/v2/updateTask/${update._id}`,Inputs)
     .then((response)=>{
       console.log(response)
       toast.success("Your task is Updated")

@@ -34,7 +34,7 @@ const submit =async()=>{
     toast.error("Title/Body should not be Empty")
     else{
         if(id){
-            await axios.post("http://localhost:5000/api/v2/addTask",{title:Inputs.title,body:Inputs.body,id:id})
+            await axios.post(`${window.location.origin}/api/v2/addTask`,{title:Inputs.title,body:Inputs.body,id:id})
             .then((response)=>{
                 console.log(response)
             })
@@ -51,7 +51,7 @@ const submit =async()=>{
 const del =async(Cardid)=>{
     // console.log(Cardid)
     if(id){
-        await axios.delete(`http://localhost:5000/api/v2/deleteTask/${Cardid}`,{data:{id:id}},)
+        await axios.delete(`${window.location.origin}/api/v2/deleteTask/${Cardid}`,{data:{id:id}},)
         .then((response)=>{
             toast.success("Your task is deleted")
         })
@@ -74,7 +74,7 @@ const update =(value)=>{
 useEffect(()=>{
     if(id){
         const fetch =async ()=>{
-            await axios.get(`http://localhost:5000/api/v2/getTasks/${id}`)
+            await axios.get(`${window.location.origin}/api/v2/getTasks/${id}`)
             .then((response)=>{
                 setArray(response.data.list)
             })

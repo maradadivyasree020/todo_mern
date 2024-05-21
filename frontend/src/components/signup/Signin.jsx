@@ -21,7 +21,7 @@ const Signin = () => {
 
   const submit =async(e)=>{
     e.preventDefault();
-        await axios.post("http://localhost:5000/api/v1/signin",Inputs)
+        await axios.post(`${window.location.origin}/api/v1/signin`,Inputs)
         .then((response)=>{
             if(response.data.message==="Please Sign Up first")
             toast.error(response.data.message)
